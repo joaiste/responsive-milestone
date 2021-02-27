@@ -1,13 +1,13 @@
-gbody {
-  background-color: #f8e0df;
+body {
+  background-color: #e9e6e5;
   font-family: Verdana, Tahoma, sans-serif;
+  font-size: 1rem;
 }
 
 #top-nav {
   background-color: #9da3a4;
   height: 6em;
   padding: 0em 1em;
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,13 +22,13 @@ gbody {
   flex-wrap: wrap;
   align-content: center;
   list-style-type: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 #top-nav li a {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   letter-spacing: 0.25rem;
   color: #a53860;
 }
@@ -41,6 +41,7 @@ gbody {
 h1 {
   font-size: 4.5rem;
   text-align: center;
+  color: rgb(51, 43, 44);
 }
 
 .flex-box {
@@ -68,9 +69,92 @@ h1 {
   height: 20em;
 }
 
-@media (max-width: 800px) {
-  .flex-item-right,
-  .flex-item-left {
-    flex: 100%;
+.flex-box .table-box {
+  margin: 2em;
+  padding: 1em;
+  background-color: #bba9ba;
+  width: 20em;
+  height: 20em;
+}
+
+table {
+  border-collapse: collapse;
+  border-color: #6a7baf #c05959;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: center;
+  text-transform: capitalize;
+  padding: 10px;
+}
+
+tr:hover {
+  background-color: #9fa9c6;
+}
+
+.flex-box textarea {
+  margin: 2em;
+  padding: 1em;
+  background-color: #c9b6c9;
+  0;
+  width: 20em;
+  height: 20em;
+}
+
+textarea {
+  width: 20em;
+  margin-top: 0em;
+  margin-left: 0em;
+  border: 0.5em solid #a53860;
+  border-radius: 0.5em;
+  background-color: #c9b6c9;
+  color: #bd284d;
+}
+
+
+
+@media screen and (min-width: 60em) {
+  body {
+    background-color: lavender;
+  }
+
+  .flex-box p {
+    font-size: 1.1rem;
   }
 }
+
+@media screen and (max-width: 60em) {
+  #top-nav {
+  background-color: #9da3a4;
+  height: 12em;
+  padding: 0em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  #top-nav .nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1; /*coppied this step from the codepen exercise, need to look up flex-grow*/
+    flex-wrap: wrap;
+    list-style-type: none;
+    font-size: 1.5rem;
+  }
+
+  #top-nav .nav-items li {
+    display: flex;
+    align-self: flex-start;
+
+  }
+
+  #top-nav li a:hover {
+    color: #a53860;
+    background-color: #d6cfcb;
+    cursor: pointer;
+  }
+}
+
